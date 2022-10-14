@@ -1,0 +1,32 @@
+Source: node-load-grunt-tasks
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends:
+ debhelper (>= 9)
+ , dh-buildinfo
+ , nodejs
+Standards-Version: 3.9.8
+Homepage: https://github.com/sindresorhus/load-grunt-tasks#readme
+Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-load-grunt-tasks.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-load-grunt-tasks.git
+
+Package: node-load-grunt-tasks
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-pkg-up (>= 1.0.0)
+ , node-resolve-pkg (>= 0.1.0)
+ , node-multimatch (>= 2.0.0)
+ , node-arrify (>= 1.0.0)
+Description: Load multiple grunt tasks using globbing patterns
+ Usually you would have to load each task one by one, which is unnecessarily
+ cumbersome.
+ .
+ This module will read the dependencies/devDependencies/peerDependencies
+ /optionalDependencies in your package.json and load grunt tasks that match the
+ provided patterns.
+ .
+ Node.js is an event-based server-side JavaScript engine.
