@@ -1,9 +1,36 @@
-node-load-grunt-tasks (3.5.2-1.1) unstable; urgency=medium
+node-load-grunt-tasks (4.0.0-1) unstable; urgency=medium
 
-  * Non maintainer upload by the Reproducible Builds team.
-  * No source change upload to rebuild on buildd with .buildinfo files.
+  * Team upload
 
- -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 03:08:50 +0100
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Remove constraints unnecessary since stretch:
+    + node-load-grunt-tasks: Drop versioned constraint on node-arrify,
+      node-multimatch, node-pkg-up and node-resolve-pkg in Depends.
+  * Bump debhelper from old 12 to 13.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.0
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Fix filenamemangle
+  * Fix GitHub tags regex
+  * Drop nodejs dependency
+  * Use dh-sequence-nodejs auto install
+  * New upstream version 4.0.0
+  * Enable upstream test (grunt)
+  * Use grunt-babel for test (patch)
+
+ -- Yadd <yadd@debian.org>  Mon, 13 Dec 2021 11:40:08 +0100
 
 node-load-grunt-tasks (3.5.2-1) unstable; urgency=low
 
