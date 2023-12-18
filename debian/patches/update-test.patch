@@ -1,0 +1,31 @@
+Description: update test to use available Debian packages
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-12-13
+
+--- a/gruntfile.js
++++ b/gruntfile.js
+@@ -8,10 +8,10 @@
+ 	});
+ 
+ 	grunt.initConfig({
+-		svgmin: {
++		babel: {
+ 			noop: {}
+ 		}
+ 	});
+ 
+-	grunt.registerTask('default', ['svgmin']);
++	grunt.registerTask('default', ['babel']);
+ };
+--- a/package.json
++++ b/package.json
+@@ -38,7 +38,7 @@
+ 	"devDependencies": {
+ 		"grunt": "^1.0.1",
+ 		"grunt-cli": "^1.2.0",
+-		"grunt-svgmin": "^5.0.0",
++		"grunt-babel": "*",
+ 		"xo": "*"
+ 	},
+ 	"peerDependencies": {

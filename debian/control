@@ -1,26 +1,31 @@
 Source: node-load-grunt-tasks
-Section: web
+Section: javascript
 Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Sruthi Chandran <srud@disroot.org>
-Build-Depends:
- debhelper (>= 9)
- , dh-buildinfo
- , nodejs
-Standards-Version: 3.9.8
-Homepage: https://github.com/sindresorhus/load-grunt-tasks#readme
-Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-load-grunt-tasks.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-load-grunt-tasks.git
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , grunt <!nocheck>
+ , node-arrify <!nocheck>
+ , node-babel7 <!nocheck>
+ , node-grunt-babel <!nocheck>
+ , node-multimatch <!nocheck>
+ , node-pkg-up <!nocheck>
+ , node-resolve-pkg <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-load-grunt-tasks
+Vcs-Git: https://salsa.debian.org/js-team/node-load-grunt-tasks.git
+Homepage: https://github.com/sindresorhus/load-grunt-tasks
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
 Package: node-load-grunt-tasks
 Architecture: all
-Depends:
- ${misc:Depends}
- , nodejs
- , node-pkg-up (>= 1.0.0)
- , node-resolve-pkg (>= 0.1.0)
- , node-multimatch (>= 2.0.0)
- , node-arrify (>= 1.0.0)
+Depends: ${misc:Depends}
+ , node-arrify
+ , node-multimatch
+ , node-pkg-up
+ , node-resolve-pkg
 Description: Load multiple grunt tasks using globbing patterns
  Usually you would have to load each task one by one, which is unnecessarily
  cumbersome.
